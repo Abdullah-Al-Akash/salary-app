@@ -81,14 +81,15 @@ const initialCountListener = function () {
 
 function addRecordHandler() {
   const name = document.getElementById("name").value;
-  const salary = document.getElementById("salary").value;
+  const salary1 = document.getElementById("salary").value;
+  const salary = parseFloat(salary1);
 
   if (!name || !salary) {
     showDataError(name, salary);
     return;
   }
 
-  addRecord(name, !salary);
+  addRecord(name, salary);
 }
 
 function addRecord(name, salary) {
@@ -115,7 +116,7 @@ function secondHandler(e) {
 const showLastItem = function () {
   const items = salary_data;
   let lastKey;
-  for (const key in items){
+  for (const key in items) {
     lastKey = key;
   };
   const lastItem = items[lastKey];
