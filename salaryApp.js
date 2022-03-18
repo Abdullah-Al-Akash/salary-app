@@ -163,6 +163,7 @@ var showDataError = function (name, salary) {
   });
 };
 
+// Toggle Message:
 function toggleErrorMessage(selector, value, msg) {
   if (value) {
     document.getElementById(selector + "line").style.display = "none";
@@ -172,6 +173,7 @@ function toggleErrorMessage(selector, value, msg) {
   }
 }
 
+// Show Record Button:
 const showRecordCount = function (data) {
   const dlg = document.getElementById("dialog-record-count");
 
